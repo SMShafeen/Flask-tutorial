@@ -23,8 +23,9 @@
 
     #banner{
       width: 100%;
-      height: 360px;
+      height: 450px;
       object-fit: cover;
+      margin-bottom: 16px;
     }
 
     h2{
@@ -39,12 +40,20 @@
   </style>
 </head>
 <body>
+  {% include "nav.html" %}
+  <img id="banner" class="img-fluid" src="../static/banner.jpg" style="margin-top:70px">
   <div class="container">
     <h1 class="text-center mt-2 mb-4">Career Website</h1>
-    <img id="banner" class="img-fluid" src="../static/banner.jpg" alt="" height="320">
-    <h2 class="text-center mt-4 mb-2">About Us</h2>
-    <p class="bodytext lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et nobis quasi impedit adipisci dicta odio quis nam quaerat beatae. Magnam animi voluptatem nesciunt quia quidem blanditiis debitis esse. Ab veniam aliquam, voluptatem, eveniet vel laborum autem suscipit atque dolor nulla ratione. Itaque cumque ea repudiandae blanditiis illo commodi voluptate eligendi.</p>
-    <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+    <h2 class="text-center mt-4 mb-4">About Us</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <p class="bodytext lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et nobis quasi impedit adipisci dicta odio quis nam quaerat beatae. Magnam animi voluptatem nesciunt quia quidem blanditiis debitis esse. Ab veniam aliquam, voluptatem, eveniet vel laborum autem suscipit atque dolor nulla ratione. Itaque cumque ea repudiandae blanditiis illo commodi voluptate eligendi. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam quam laudantium voluptatum voluptate rerum minima eos aliquam suscipit, error consectetur maiores amet fugiat et ea. Velit unde totam quidem fugit.</p>
+      </div>
+      <div class="d-none d-md-block col-md-6">
+        <img class="rounded" src="../static/team.jpg" alt="" style="height:350px;">
+      </div>
+    </div>
+    <h2 class="text-center mt-4 mb-4">Open Positions</h2>
     <div class="body-text">
       <div>
         {% for job in jobs %}
@@ -53,9 +62,9 @@
       </div>
     </div>
     <div class="text-center">
-      <button class="btn btn-primary btn-lg m-2">Contact Us</button>
-      <p class="mt-4">All right reserved!</p>
+      <a href="mailto:websmith@gmail.com?subject=Question%20About%20Job%20Openings&body=Name%3A%0D%0AQuestion%3A" class="btn btn-primary btn-lg m-4">Contact Us</a>
     </div>
   </div>
+  {% include "footer.html" %}
 </body>
 </html>
